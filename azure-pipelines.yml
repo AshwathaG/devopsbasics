@@ -18,5 +18,6 @@ steps:
     goals: 'package'
 - task: CopyFiles@2
   inputs:
+    SourceFolder: '$(agent.builddirectory)'
     Contents: '**/.war'
     TargetFolder: '$(build.artifactstagingdirectory)'
